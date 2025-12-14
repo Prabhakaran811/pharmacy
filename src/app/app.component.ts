@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_learning';
+   isMenuOpen = false;
+
+    toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  
 }
