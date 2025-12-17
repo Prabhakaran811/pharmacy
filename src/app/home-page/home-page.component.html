@@ -1,0 +1,171 @@
+<section class="slider">
+
+  <div
+    class="slide"
+    *ngFor="let slide of slides; let i = index"
+    [class.active]="i === currentIndex"
+    [style.backgroundImage]="'url(' + slide.image + ')'"
+  >
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <h1>{{ slide.title }}</h1>
+      <p>{{ slide.desc }}</p>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <button class="nav prev" (click)="prev()">‹</button>
+  <button class="nav next" (click)="next()">›</button>
+
+  <!-- DOTS -->
+  <div class="dots">
+    <span
+      *ngFor="let s of slides; let i = index"
+      [class.active]="i === currentIndex"
+      (click)="goToSlide(i)"
+    ></span>
+  </div>
+
+</section>
+
+
+
+
+  <section class="products-section">
+    <span class="section-badge">Featured Categories</span>
+    <h2 class="section-title">Curated for You</h2>
+    <p class="section-subtitle">Explore handpicked collections that blend style, innovation, and quality.</p>
+    
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Art">
+        <div class="content">
+          <span class="count">32 Items</span>
+          <h3>Creative Art</h3>
+          <p>Inspiring works from talented artists</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Tech">
+        <div class="content">
+          <span class="count">18 Items</span>
+          <h3>Tech Innovations</h3>
+          <p>Gadgets that shape the future</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Fashion">
+        <div class="content">
+          <span class="count">45 Items</span>
+          <h3>Modern Fashion</h3>
+          <p>Trends that define elegance</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Food">
+        <div class="content">
+          <span class="count">28 Items</span>
+          <h3>Gourmet Delights</h3>
+          <p>Flavors from around the world</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Travel">
+        <div class="content">
+          <span class="count">22 Items</span>
+          <h3>Travel Essentials</h3>
+          <p>Gear for unforgettable journeys</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Home">
+        <div class="content">
+          <span class="count">35 Items</span>
+          <h3>Home Living</h3>
+          <p>Comfort and style for your space</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <section class="facility">
+    <div class="facility-container">
+      <span class="section-badge">Our Facility</span>
+      <h2>Professional Wholesale Operations</h2>
+      <p class="desc">
+        Our wholesale godown maintains the highest standards of pharmaceutical storage and distribution, ensuring you receive quality products every time.
+      </p>
+
+      <!-- Desktop Orbit with Round Cards -->
+      <div class="orbit-wrapper">
+        <div class="central-image">
+          <img src="https://worldwiderefrigeration.com/wp-content/uploads/2020/12/AdobeStock_223755450-1-scaled-e1685393955172.jpeg" alt="Warehouse">
+          <div class="experience-badge">
+            <h3>15+</h3>
+            <p>Years of<br>Experience</p>
+          </div>
+        </div>
+
+        <div class="feature-orbit">
+          <div class="feature-item">
+            <div class="card">
+              <span>🌡️</span>
+              <h4>Temperature Controlled</h4>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="card">
+              <span>📦</span>
+              <h4>Organized Inventory</h4>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="card">
+              <span>✔️</span>
+              <h4>Quality Assured</h4>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="card">
+              <span>🛡️</span>
+              <h4>Compliance First</h4>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="card">
+              <span>⚡</span>
+              <h4>Quick Processing</h4>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="card">
+              <span>🚚</span>
+              <h4>Fast Delivery</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Grid with Full Descriptions -->
+      <div class="mobile-features">
+        <div class="card"><span>🌡️</span><h4>Temperature Controlled</h4><p>Climate-controlled storage for sensitive medications</p></div>
+        <div class="card"><span>📦</span><h4>Organized Inventory</h4><p>Proper batch tracking and FIFO management</p></div>
+        <div class="card"><span>✔️</span><h4>Quality Assured</h4><p>Sourced directly from authorized manufacturers</p></div>
+        <div class="card"><span>🛡️</span><h4>Compliance First</h4><p>Full adherence to drug control regulations</p></div>
+        <div class="card"><span>⚡</span><h4>Quick Processing</h4><p>Orders processed within 2 hours</p></div>
+        <div class="card"><span>🚚</span><h4>Fast Delivery</h4><p>Same-day dispatch before 2 PM</p></div>
+      </div>
+
+      <button class="cta-btn">Learn More About Us</button>
+    </div>
+  </section>
