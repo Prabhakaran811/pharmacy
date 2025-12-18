@@ -34,67 +34,29 @@
 
 
 
-  <section class="products-section">
-    <span class="section-badge">Featured Categories</span>
-    <h2 class="section-title">Curated for You</h2>
-    <p class="section-subtitle">Explore handpicked collections that blend style, innovation, and quality.</p>
-    
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Art">
-        <div class="content">
-          <span class="count">32 Items</span>
-          <h3>Creative Art</h3>
-          <p>Inspiring works from talented artists</p>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Tech">
-        <div class="content">
-          <span class="count">18 Items</span>
-          <h3>Tech Innovations</h3>
-          <p>Gadgets that shape the future</p>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Fashion">
-        <div class="content">
-          <span class="count">45 Items</span>
-          <h3>Modern Fashion</h3>
-          <p>Trends that define elegance</p>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Food">
-        <div class="content">
-          <span class="count">28 Items</span>
-          <h3>Gourmet Delights</h3>
-          <p>Flavors from around the world</p>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Travel">
-        <div class="content">
-          <span class="count">22 Items</span>
-          <h3>Travel Essentials</h3>
-          <p>Gear for unforgettable journeys</p>
-        </div>
-      </div>
-      
-      <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae" alt="Home">
-        <div class="content">
-          <span class="count">35 Items</span>
-          <h3>Home Living</h3>
-          <p>Comfort and style for your space</p>
-        </div>
+  <section class="facility-section">
+  <div class="particles" id="particles"></div>
+
+  <span class="section-badge">Explore Our Facility</span>
+
+  <h2 class="section-title">
+    Healing Spaces, Modern Grace
+  </h2>
+
+  <p class="section-subtitle">
+    Step into a world where cutting-edge technology meets compassionate design.
+  </p>
+
+  <div class="facility-grid">
+    <div class="facility-card" *ngFor="let card of cards">
+      <img [src]="card.img" [alt]="card.title">
+      <div class="overlay">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.desc }}</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 
@@ -169,3 +131,67 @@
       <button class="cta-btn">Learn More About Us</button>
     </div>
   </section>
+
+
+
+
+
+ <header class="header">
+    <h1>Testimonials</h1>
+    <h4>Trusted by Veterinary Professionals</h4>
+    <p>Hear from veterinarians and farm owners who rely on us for their pharmaceutical needs</p>
+  </header>
+
+  <div class="timeline">
+
+    <!-- Entry 1: Mr. Scofield (Left) -->
+    <div class="timeline-entry left">
+      <div class="card">
+        <div class="image-box">
+          <img src="https://www.shutterstock.com/image-photo/happy-middle-aged-business-man-600nw-2426323925.jpg" alt="Mr. Scofield">
+        </div>
+        <div class="content">
+          <h3>Mr. Scofield</h3>
+          <h4>Chair, Board of Trustees</h4>
+          <p>Scofield joined the Boards of Trustees of Phanes-Biotech and was named Chair in April 2019. A substantial gift from the Friedman family enabled the creation of The Friedman Brain Institute, advancing groundbreaking neuroscience research.</p>
+          <a href="#" class="btn">Know More →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entry 2: Mr. Lincoln Bruce (Right) -->
+    <div class="timeline-entry right">
+      <div class="card">
+        <div class="image-box">
+          <img src="https://www.shutterstock.com/image-photo/handsome-hispanic-senior-business-man-260nw-2343004193.jpg" alt="Mr. Lincoln Bruce">
+        </div>
+        <div class="content">
+          <h3>Mr. Lincoln Bruce</h3>
+          <h4>Co-Chair, Board of Trustees</h4>
+          <p>Lincoln joined the Boards of Trustees of Phanes-Biotech and was named Co-Chair in April 2019. His strategic vision has been pivotal in driving innovation and growth at The Friedman Brain Institute.</p>
+          <a href="#" class="btn">Know More →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Entry 3: Ms. Sarah Trancredi (Left) -->
+    <div class="timeline-entry left">
+      <div class="card">
+        <div class="image-box">
+          <img src="https://img.freepik.com/premium-photo/portrait-scientist-confidence-mature-woman-lab-research-career-job-as-biologist-smile-science-face-medical-doctor-with-arms-crossed-clinic-healthcare-innovation_590464-416361.jpg" alt="Ms. Sarah Trancredi">
+        </div>
+        <div class="content">
+          <h3>Ms. Sarah Trancredi</h3>
+          <h4>Dean of Phanes-Biotech</h4>
+          <p>Sarah was appointed Dean in April 2019, bringing exceptional leadership to Phanes-Biotech. The Friedman family's transformative gift has empowered pioneering advancements in brain science under her guidance.</p>
+          <a href="#" class="btn">Know More →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  
+
+
+
