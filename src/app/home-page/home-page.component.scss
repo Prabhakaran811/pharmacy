@@ -277,7 +277,6 @@
     
     /* SECTION */
     .facility {
-      padding: 140px 20px;
       background: linear-gradient(to bottom, #f0fdf4, #ffffff);
     }
 
@@ -386,21 +385,21 @@
       transform: translate(-50%, -50%);
     }
 
-    .feature-item .card {
-      width: 100%;
-      height: 100%;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(12px);
-      border-radius: 50%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      transition: all 0.5s ease;
-    }
+.feature-item .card {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* ⭐ MAGIC LINE ⭐ */
+  transform: rotate(calc(-1 * var(--angle)));
+}
+
 
     .feature-item span {
       font-size: 48px;
@@ -415,20 +414,66 @@
       line-height: 1.2;
     }
 
+
+    .feature-orbit {
+  --orbit-angle: 0deg;
+  animation: rotate 80s linear infinite;
+}
+
+
     /* No <p> visible in round cards - kept short titles only for clean look */
 
     /* Orbit positions */
-    .feature-item:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateY(-340px) rotate(0deg); }
-    .feature-item:nth-child(2) { transform: translate(-50%, -50%) rotate(60deg) translateY(-340px) rotate(-60deg); }
-    .feature-item:nth-child(3) { transform: translate(-50%, -50%) rotate(120deg) translateY(-340px) rotate(-120deg); }
-    .feature-item:nth-child(4) { transform: translate(-50%, -50%) rotate(180deg) translateY(-340px) rotate(-180deg); }
-    .feature-item:nth-child(5) { transform: translate(-50%, -50%) rotate(240deg) translateY(-340px) rotate(-240deg); }
-    .feature-item:nth-child(6) { transform: translate(-50%, -50%) rotate(300deg) translateY(-340px) rotate(-300deg); }
+   .feature-item:nth-child(1) {
+  --angle: 0deg;
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-340px);
+}
 
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
+.feature-item:nth-child(2) {
+  --angle: 60deg;
+  transform: translate(-50%, -50%) rotate(60deg) translateY(-340px);
+}
+
+.feature-item:nth-child(3) {
+  --angle: 120deg;
+  transform: translate(-50%, -50%) rotate(120deg) translateY(-340px);
+}
+
+.feature-item:nth-child(4) {
+  --angle: 180deg;
+  transform: translate(-50%, -50%) rotate(180deg) translateY(-340px);
+}
+
+.feature-item:nth-child(5) {
+  --angle: 240deg;
+  transform: translate(-50%, -50%) rotate(240deg) translateY(-340px);
+}
+
+.feature-item:nth-child(6) {
+  --angle: 300deg;
+  transform: translate(-50%, -50%) rotate(300deg) translateY(-340px);
+}
+
+
+.feature-item .card {
+  transform: rotate(
+    calc(-1 * (var(--angle) + var(--orbit-angle)))
+  );
+}
+
+
+
+ @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    --orbit-angle: 0deg;
+  }
+  to {
+    transform: rotate(360deg);
+    --orbit-angle: 360deg;
+  }
+}
+
 
     /* Hover */
     .orbit-wrapper:hover .feature-orbit { animation-play-state: paused; }
@@ -508,24 +553,24 @@
   .orbit-wrapper { width: 700px; height: 700px; }
   .central-image { width: 340px; height: 440px; }
 
-  .feature-item:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-290px) rotate(0deg);
-  }
-  .feature-item:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(60deg) translateY(-290px) rotate(-60deg);
-  }
-  .feature-item:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(120deg) translateY(-290px) rotate(-120deg);
-  }
-  .feature-item:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(180deg) translateY(-290px) rotate(-180deg);
-  }
-  .feature-item:nth-child(5) {
-    transform: translate(-50%, -50%) rotate(240deg) translateY(-290px) rotate(-240deg);
-  }
-  .feature-item:nth-child(6) {
-    transform: translate(-50%, -50%) rotate(300deg) translateY(-290px) rotate(-300deg);
-  }
+  // .feature-item:nth-child(1) {
+  //   transform: translate(-50%, -50%) rotate(0deg) translateY(-290px) rotate(0deg);
+  // }
+  // .feature-item:nth-child(2) {
+  //   transform: translate(-50%, -50%) rotate(60deg) translateY(-290px) rotate(-60deg);
+  // }
+  // .feature-item:nth-child(3) {
+  //   transform: translate(-50%, -50%) rotate(120deg) translateY(-290px) rotate(-120deg);
+  // }
+  // .feature-item:nth-child(4) {
+  //   transform: translate(-50%, -50%) rotate(180deg) translateY(-290px) rotate(-180deg);
+  // }
+  // .feature-item:nth-child(5) {
+  //   transform: translate(-50%, -50%) rotate(240deg) translateY(-290px) rotate(-240deg);
+  // }
+  // .feature-item:nth-child(6) {
+  //   transform: translate(-50%, -50%) rotate(300deg) translateY(-290px) rotate(-300deg);
+  // }
 }
 
 
@@ -912,7 +957,6 @@
     .facility-section {
             background: linear-gradient(to bottom, #f0fdf4, #ecfdf5);
 
-      padding: 160px 20px 140px;
       max-width: 1600px;
       margin: auto;
       text-align: center;
