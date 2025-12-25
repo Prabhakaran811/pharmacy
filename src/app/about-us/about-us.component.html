@@ -29,12 +29,12 @@
 
   <section class="founding-section">
     <div class="section-title">
-      <h2>Our Founding Story</h2>
+      <h2 style="color: #1f7a56;" >Our Founding Story</h2>
     </div>
 
     <div class="founding-container">
       <div class="founding-text animate" #animateItem>
-        <h3>How It All Began</h3>
+        <h3 style="color: #1f7a56;" >How It All Began</h3>
 
         <p>
           MediCare Pharmacy was founded with a simple yet powerful vision:
@@ -72,7 +72,7 @@
           <div class="circle-element">
             <div class="circle-icon icon-1">❤️</div>
             <div class="circle-icon icon-2">🧑‍⚕️</div>
-            <div class="circle-icon icon-3">🤝❤️</div>
+            <div class="circle-icon icon-3">🤝</div>
             <div class="circle-icon icon-4">🩺</div>
           </div>
         </div>
@@ -80,7 +80,56 @@
     </div>
   </section>
 
-<section class="services-showcase">
+
+    <div class="card">
+
+  <!-- NAV BUTTONS -->
+  <!-- <div class="nav-buttons">
+    <button class="nav-btn prev" (click)="prevSlide()">‹</button>
+    <button class="nav-btn next" (click)="nextSlide()">›</button>
+  </div> -->
+
+  <!-- SINGLE SLIDE -->
+  <div class="inner-part active">
+
+    <!-- IMAGE -->
+    <div class="img">
+      <img [src]="services[currentSlide].image" />
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content active">
+      <div class="title" style="color: #1f7a56;" >{{ services[currentSlide].title }}</div>
+
+      <div class="text">
+        {{ services[currentSlide].text }}
+      </div>
+
+      <div class="features">
+        <div class="feature-tag"
+             *ngFor="let f of services[currentSlide].features">
+          ✔ {{ f }}
+        </div>
+      </div>
+
+      <button>
+        Learn More
+      </button>
+    </div>
+  </div>
+
+  <!-- DOTS -->
+  <div class="slider">
+    <div class="slide"
+         *ngFor="let s of services; let i = index"
+         [class.active]="i === currentSlide"
+         (click)="goToSlide(i)">
+    </div>
+  </div>
+
+</div>
+
+<!-- <section class="services-showcase">
   <div class="section-title">
     <h2>Beyond Prescriptions</h2>
   </div>
@@ -110,9 +159,97 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <h1 class="animate" style="color: #1f7a56;" >Meet Our Medical Director</h1>
+    <p class="subtitle animate delay-1">
+      Leading our team of healthcare professionals with expertise and compassion
+    </p>
+  </div>
+
+  <!-- Doctor Card -->
+  <div class="doctor-card animate delay-1">
+
+    <!-- Image -->
+    <div class="doctor-image-section">
+      <img
+        [src]="doctor.image"
+        [alt]="doctor.name"
+        class="doctor-image"
+      />
+
+      <div class="doctor-badge">
+        <i class="fas fa-award"></i> {{ doctor.badge }}
+      </div>
+
+      <div class="experience-badge">
+        <div class="experience-years">{{ doctor.experience }}+</div>
+        <div class="experience-label">Years Experience</div>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="doctor-info">
+      <h1 class="doctor-name">{{ doctor.name }}</h1>
+
+      <div class="doctor-title">
+        <i class="fas fa-graduation-cap"></i> {{ doctor.title }}
+      </div>
+
+      <p class="doctor-description">
+        {{ doctor.description }}
+      </p>
+
+      <!-- Details -->
+      <div class="doctor-details">
+        <div
+          class="detail-card animate"
+          *ngFor="let d of doctor.details"
+        >
+          <div class="detail-icon">
+            <i [class]="d.icon"></i>
+          </div>
+          <h3 class="detail-title">{{ d.title }}</h3>
+          <p class="detail-text" [innerHTML]="d.text"></p>
+        </div>
+      </div>
+
+      <!-- Specializations -->
+      <div class="specializations">
+        <h3>Areas of Specialization</h3>
+
+        <div class="specialization-tags">
+          <div class="tag" *ngFor="let s of doctor.specializations">
+            <i [class]="s.icon"></i> {{ s.label }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="cta-section">
+    <h2 class="cta-title">Schedule a Consultation</h2>
+    <p class="cta-description">
+      Book a one-on-one consultation with Dr. Chen
+    </p>
+
+    <div class="cta-buttons">
+      <button class="cta-button primary" (click)="scheduleConsultation()">
+        <i class="fas fa-calendar-check"></i> Book Appointment
+      </button>
+
+      <button class="cta-button secondary" (click)="contactDoctor()">
+        <i class="fas fa-comment-medical"></i> Send Message
+      </button>
+    </div>
+  </div> -->
+
+</div>
 
 
   <!-- Mission Vision -->
@@ -137,4 +274,11 @@
       </div>
     </div>
   </section>
+
+  
+
+
+
+
+
 </div>

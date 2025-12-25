@@ -16,6 +16,84 @@ import {
 })
 export class AboutUsComponent implements AfterViewInit, OnInit, OnDestroy {
 
+
+  doctor = {
+  name: 'Dr. Sarah Chen, PharmD',
+  title: 'Doctor of Pharmacy | Board Certified Pharmacist',
+  image:
+    'https://images.unsplash.com/photo-1559839734-2b71ea197ec2',
+  badge: 'Medical Director',
+  experience: 15,
+
+  description: `
+    With over 15 years of clinical experience, Dr. Chen leads our pharmacy
+    team with unwavering dedication to patient care.
+  `,
+
+  details: [
+    {
+      icon: 'fas fa-graduation-cap',
+      title: 'Education',
+      text: `
+        • Doctor of Pharmacy, Harvard University<br>
+        • Residency: Johns Hopkins Hospital<br>
+        • Fellowship: Clinical Pharmacology
+      `
+    },
+    {
+      icon: 'fas fa-stethoscope',
+      title: 'Expertise',
+      text: `
+        • Medication Therapy Management<br>
+        • Chronic Disease Management<br>
+        • Geriatric Care
+      `
+    },
+    {
+      icon: 'fas fa-handshake',
+      title: 'Philosophy',
+      text: `
+        "Every patient deserves personalized care."
+      `
+    }
+  ],
+
+  specializations: [
+    { icon: 'fas fa-heartbeat', label: 'Cardiovascular Health' },
+    { icon: 'fas fa-brain', label: 'Neurology' },
+    { icon: 'fas fa-lungs', label: 'Respiratory Care' },
+    { icon: 'fas fa-capsules', label: 'Polypharmacy Management' }
+  ]
+};
+
+
+  
+  services = [
+  {
+    id: 1,
+    title: 'Medication Management',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56',
+    text: 'Our expert pharmacists provide comprehensive medication therapy management...',
+    features: ['Medication Reviews', 'Interaction Checks', 'Personalized Plans']
+  },
+  {
+    id: 2,
+    title: 'Immunization Services',
+    image: 'https://images.unsplash.com/photo-1587854692152-cbe660dbde88',
+    text: 'Stay protected with our comprehensive immunization services...',
+    features: ['Flu Vaccines', 'Travel Vaccines', 'Routine Immunizations']
+  },
+  {
+    id: 3,
+    title: 'Health Screenings',
+    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118',
+    text: 'Early detection saves lives with regular health screenings...',
+    features: ['Blood Pressure', 'Cholesterol', 'Diabetes']
+  }
+];
+
+
+
   testimonials = [
     {
       img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d',
@@ -142,4 +220,36 @@ private animateHero() {
       }
     });
   }
+
+
+
+  nextSlide() {
+  this.currentSlide =
+    (this.currentSlide + 1) % this.services.length;
+}
+
+prevSlide() {
+  this.currentSlide =
+    (this.currentSlide - 1 + this.services.length) %
+    this.services.length;
+}
+
+goToSlide(index: number) {
+  this.currentSlide = index;
+}
+
+
+scheduleConsultation() {
+  alert(
+    'Available slots:\nMon–Fri: 9am–5pm\nSat: 10am–2pm\nCall (555) 123-HEALTH'
+  );
+}
+
+contactDoctor() {
+  const msg = prompt('Enter your message for Dr. Chen');
+  if (msg) {
+    alert('Message sent successfully!');
+  }
+}
+
 }
