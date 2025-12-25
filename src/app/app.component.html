@@ -15,14 +15,22 @@
     </div>
 
     <!-- DESKTOP NAV -->
-    <nav class="nav-links">
+    <!-- <nav class="nav-links">
       <a class="active">Home</a>
       <a>About</a>
       <a>Products</a>
       <a>Bulk Order</a>
       <a>Licences</a>
       <a>Contact</a>
-    </nav>
+    </nav> -->
+
+    <nav class="nav-links">
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/about" routerLinkActive="active">About</a>
+  <a routerLink="/products" routerLinkActive="active">Products</a>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a>
+</nav>
+
 
     <!-- ACTION BUTTONS -->
     <div class="nav-actions">
@@ -43,12 +51,19 @@
     <button class="close-btn" (click)="closeMenu()">✕</button>
   </div>
 
-  <a class="active" (click)="closeMenu()">Home</a>
+  <!-- <a class="active" (click)="closeMenu()">Home</a>
   <a (click)="closeMenu()">About</a>
   <a (click)="closeMenu()">Products</a>
   <a (click)="closeMenu()">Bulk Order</a>
   <a (click)="closeMenu()">Licences</a>
-  <a (click)="closeMenu()">Contact</a>
+  <a (click)="closeMenu()">Contact</a> -->
+
+
+  <a routerLink="/home" (click)="closeMenu()">Home</a>
+<a routerLink="/about" (click)="closeMenu()">About</a>
+<a routerLink="/products" (click)="closeMenu()">Products</a>
+<a routerLink="/contact" (click)="closeMenu()">Contact</a>
+
 
   <button class="call-btn full">📞 Call Us</button>
   <button class="order-btn full">💬 Order on WhatsApp</button>
@@ -58,22 +73,21 @@
 
 
 
-<app-home-page></app-home-page>
+<!-- <app-about-us></app-about-us> -->
+
+<!-- <app-home-page></app-home-page> -->
 
 
 
 
 
 
+<router-outlet></router-outlet>
 
 
 
 
-
-
-
-
-  <section class="trust-section">
+  <!-- <section class="trust-section">
   <div class="trust-header">Trust & Compliance</div>
   <h2 class="trust-title">Licensed & Verified</h2>
 
@@ -134,7 +148,10 @@
       Business Hours: Mon-Sat, 9:00 AM - 7:00 PM • WhatsApp: 24/7
     </span>
   </div>
-</section>
+</section> -->
+
+
+
 
 
 <footer class="site-footer">
