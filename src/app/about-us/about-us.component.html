@@ -1,70 +1,140 @@
-<!-- HERO -->
-<header class="hero-header" #hero>
-  <div class="parallax-foreground"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>About Us</h1>
-    <p>Committed to Excellence in Animal Health & Veterinary Supplies</p>
-  </div>
-</header>
-
-<main>
-
-  <!-- SECTION 1 -->
-  <section class="about-intro" #section>
-    <img
-      class="profile"
-      #image
-      src="assets/slide1.jpg"
-      alt="Dr. Ajith Kumar"
-    />
-
-    <div class="intro-content">
-      <h2>Welcome to Ajith Kumar Veterinary Pharmacy</h2>
-      <p>...</p>
+<div class="main-content">
+  <section class="creative-hero">
+    <div class="floating-pills">
+      <div class="pill" *ngFor="let p of pills"></div>
     </div>
 
-    <img
-      class="section-image"
-      #image
-      src="assets/slide1.jpg"
-    />
+    <div class="creative-hero-content">
+      <h1 #animatedTitle>
+        Your Health, Our <span style="color:#4ecdc4">Commitment</span>
+      </h1>
+
+      <p #animatedSubtitle>
+        For over two decades, we've been more than just a pharmacy.
+      </p>
+
+<div class="hero-stats">
+  <div
+    class="stat-item"
+    *ngFor="let stat of stats"
+    #animateItem
+  >
+    <div class="stat-number">{{ stat.value }}</div>
+    <div class="stat-label">{{ stat.label }}</div>
+  </div>
+</div>
+
+    </div>
   </section>
 
-  <!-- SECTION 2 -->
-  <section class="experience" #section>
-    <h2>Our Qualifications and Experience</h2>
-    <p>...</p>
+  <section class="founding-section">
+    <div class="section-title">
+      <h2>Our Founding Story</h2>
+    </div>
 
-    <img
-      class="section-image"
-      #image
-      src="assets/slide1.jpg"
-    />
+    <div class="founding-container">
+      <div class="founding-text animate" #animateItem>
+        <h3>How It All Began</h3>
 
-    <ul>
-      <li>Extensive work in dairy and poultry farms</li>
-      <li>Clinical practice treating pets</li>
-      <li>Veterinary pharmaceuticals expertise</li>
-    </ul>
+        <p>
+          MediCare Pharmacy was founded with a simple yet powerful vision:
+          to create a healthcare destination where patients feel heard,
+          cared for, and empowered.
+        </p>
+
+        <p>
+          Our founders noticed a gap in the healthcare system — prescriptions
+          without guidance, care without clarity.
+        </p>
+
+        <p>
+          So we built something different — expertise with empathy.
+        </p>
+
+        <ul class="founding-features">
+          <li>
+            <span class="emoji">✅</span>
+            <span>Healthcare should be personal, not transactional</span>
+          </li>
+          <li>
+            <span class="emoji">✅</span>
+            <span>Every patient deserves time and explanation</span>
+          </li>
+          <li>
+            <span class="emoji">✅</span>
+            <span>Modern care with a human touch</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="founding-visual animate" #animateItem>
+        <div class="story-circle">
+          <div class="circle-element">
+            <div class="circle-icon icon-1">❤️</div>
+            <div class="circle-icon icon-2">🧑‍⚕️</div>
+            <div class="circle-icon icon-3">🤝❤️</div>
+            <div class="circle-icon icon-4">🩺</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- SECTION 3 -->
-  <section class="purpose" #section>
-    <h2>Purpose of Our Wholesale Unit</h2>
+<section class="services-showcase">
+  <div class="section-title">
+    <h2>Beyond Prescriptions</h2>
+  </div>
 
-    <img
-      class="section-image"
-      #image
-      src="assets/slide1.jpg"
-    />
+  <div class="services-grid">
+    <div class="service-card animate" #animateItem>
+      <div class="service-icon">🧑‍⚕️</div>
+      <div class="service-content">
+        <h3>Medication Therapy</h3>
+        <p>Personalized consultations for safer, smarter medication use.</p>
+      </div>
+    </div>
 
-    <ul>
-      <li>Bulk access to medicines</li>
-      <li>Support veterinary community</li>
-      <li>Promote animal welfare</li>
-      <li>Latest advancements</li>
-    </ul>
+    <div class="service-card animate" #animateItem>
+      <div class="service-icon">💉</div>
+      <div class="service-content">
+        <h3>Immunization</h3>
+        <p>Safe and convenient vaccination services.</p>
+      </div>
+    </div>
+
+    <div class="service-card animate" #animateItem>
+      <div class="service-icon">❤️</div>
+      <div class="service-content">
+        <h3>Health Screening</h3>
+        <p>Early detection for a healthier future.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Mission Vision -->
+  <section class="mission-vision">
+    <div class="mv-container">
+      <div class="mv-card animate"  #animateItem>
+        <div class="mv-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>Accessible, personalized healthcare beyond prescriptions.</p>
+      </div>
+
+      <div class="mv-card animate"  #animateItem>
+        <div class="mv-icon">👁️</div>
+        <h3>Our Vision</h3>
+        <p>To be the most trusted community healthcare partner.</p>
+      </div>
+
+      <div class="mv-card animate"  #animateItem>
+        <div class="mv-icon">🤝</div>
+        <h3>Our Promise</h3>
+        <p>Integrity, expertise, and genuine care in every interaction.</p>
+      </div>
+    </div>
   </section>
-
-</main>
+</div>
