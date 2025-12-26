@@ -1,8 +1,7 @@
 import {
   Component,
   AfterViewInit,
-  HostListener,
-  ElementRef,
+  OnInit,
   ViewChild
 } from '@angular/core';
 @Component({
@@ -11,61 +10,41 @@ import {
   templateUrl: './contact-as.component.html',
   styleUrl: './contact-as.component.scss'
 })
-export class ContactAsComponent implements AfterViewInit {
+export class ContactAsComponent implements OnInit, AfterViewInit {
 
-  @ViewChild('hero', { static: true }) hero!: ElementRef;
-  @ViewChild('contactSection', { static: true }) contactSection!: ElementRef;
-  @ViewChild('interiorImg', { static: true }) interiorImg!: ElementRef;
+  phone = '(555) 123-HEALTH';
+  whatsapp = '15551234567';
+  email = 'info@medicarepharmacy.com';
 
-  ngAfterViewInit(): void {
-    this.initParticles();
-    this.handleScroll();
+  ngOnInit() {
+    // this.updateStatus();
+    // this.createParticles();
   }
 
-  /* 🔹 Desktop-only particles */
-  private initParticles(): void {
-    if (window.innerWidth <= 768) return;
-
-    for (let i = 0; i < 15; i++) {
-      setTimeout(() => this.createParticle(), i * 1200);
-    }
+  ngAfterViewInit() {
   }
 
-  private createParticle(): void {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-
-    const size = Math.random() * 10 + 5;
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    particle.style.left = `${Math.random() * 100}vw`;
-    particle.style.animationDuration = `${Math.random() * 20 + 15}s`;
-    particle.style.animationDelay = `${Math.random() * 10}s`;
-
-    this.hero.nativeElement.appendChild(particle);
-
-    setTimeout(() => particle.remove(), 35000);
+  makeCall() {
+    alert(`Calling ${this.phone}`);
+    // window.location.href = `tel:${this.phone}`;
   }
 
-@HostListener('window:scroll')
-handleScroll(): void {
-
-  if (this.contactSection &&
-      this.isInViewport(this.contactSection.nativeElement)) {
-    this.contactSection.nativeElement.classList.add('visible');
+  openWhatsApp() {
+    const msg = encodeURIComponent('Hello MediCare Pharmacy!');
+    window.open(`https://wa.me/${this.whatsapp}?text=${msg}`, '_blank');
   }
 
-  if (this.interiorImg &&
-      this.isInViewport(this.interiorImg.nativeElement)) {
-    this.interiorImg.nativeElement.classList.add('visible');
+  sendEmail() {
+    window.location.href =
+      `mailto:${this.email}?subject=Inquiry&body=Hello MediCare Team`;
   }
-}
 
-  private isInViewport(element: HTMLElement, offset = 100): boolean {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= window.innerHeight - offset &&
-      rect.bottom >= 0
-    );
+  scrollToForm() {
+    document.getElementById('contactForm')
+      ?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

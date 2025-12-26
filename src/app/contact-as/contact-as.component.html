@@ -1,43 +1,256 @@
+   <div class="background-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
 
-    <!-- Hero with conditional particles -->
-    <header class="hero-header" #hero>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Contact Us</h1>
-            <p>We're Always Ready to Assist You</p>
+
+        <div class="particles"></div>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Connect With Us</h1>
+                <p class="hero-subtitle">
+                    Your health journey matters. Reach out through any channel that works for you, 
+                    and our dedicated healthcare team will provide personalized support and guidance.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="stat-circle">24/7</div>
+                        <div class="stat-label">Emergency Support</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-circle">15m</div>
+                        <div class="stat-label">Avg Response Time</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-circle">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="contact-section" #contactSection>
-            <div class="contact-info">
-                <h2>Get in Touch</h2>
-                <ul class="contact-details">
-                   <li>📞 <div><strong>Phone:</strong> +91-XXXXXXXXXX</div></li>
-                    <li>💬 <div><strong>WhatsApp:</strong> +91-XXXXXXXXXX</div></li>
-                    <li>📧 <div><strong>Email:</strong> ajithkumarvetpharmacyexample.com</div></li>
-                    <li>📍 <div><strong>Address:</strong> City, State</div></li>
-                    <li>⏰ <div><strong>Hours:</strong> Mon–Sat 9AM–8PM</div></li>
-
-                </ul>
-                <a href="https://wa.me/91XXXXXXXXXX?text=Hello!%20I%20would%20like%20to%20enquire%20about%20veterinary%20products." class="whatsapp-btn" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
-                </a>
+    <!-- Contact Channels -->
+    <section class="contact-channels">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Channels</h2>
+                <p class="section-subtitle">Choose your preferred way to connect with our healthcare experts</p>
             </div>
+
+            <div class="channels-grid">
+                <!-- Phone -->
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="channel-title">Phone Support</h3>
+                    <div class="channel-detail">(555) 123-HEALTH</div>
+                    <p class="channel-description">
+                        Immediate assistance for prescriptions, consultations, and medical inquiries.
+                        Our pharmacists are available during operating hours.
+                    </p>
+                    <div class="channel-action">
+                        <button class="channel-button" onclick="makeCall()">
+                            <i class="fas fa-phone"></i> Call Now
+                        </button>
+                        <div class="channel-status">
+                            <span class="status-dot"></span>
+                            <span>Available Now</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="channel-title">WhatsApp Chat</h3>
+                    <div class="channel-detail">+1 (555) 123-4567</div>
+                    <p class="channel-description">
+                        Quick responses via WhatsApp. Send prescription images, 
+                        get dosage reminders, and receive instant support.
+                    </p>
+                    <div class="channel-action">
+                        <button class="channel-button" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Start Chat
+                        </button>
+                        <div class="channel-status">
+                            <span class="status-dot"></span>
+                            <span>Online Now</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="channel-card">
+                    <div class="channel-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="channel-title">Email Support</h3>
+                    <div class="channel-detail">infomedicarepharmacy.com</div>
+                    <p class="channel-description">
+                        For detailed inquiries, prescription requests, or partnership opportunities.
+                        We respond within 24 hours.
+                    </p>
+                    <div class="channel-action">
+                        <button class="channel-button" onclick="sendEmail()">
+                            <i class="fas fa-paper-plane"></i> Send Email
+                        </button>
+                        <div class="channel-status">
+                            <span class="status-dot"></span>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Timeline -->
+    <section class="hours-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Operating Hours</h2>
+                <p class="section-subtitle">We're here when you need us</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-day">Monday - Friday</div>
+                        <div class="timeline-time">8:00 AM - 8:00 PM</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-day">Saturday</div>
+                        <div class="timeline-time">9:00 AM - 6:00 PM</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-day">Sunday</div>
+                        <div class="timeline-time">10:00 AM - 4:00 PM</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-day">Emergency Line</div>
+                        <div class="timeline-time" style="color: var(--accent);">24/7 Available</div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section" id="contactForm">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">Send Your Message</h2>
+                <form id="contactFormElement">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-input" required>
+                            <label class="form-label" for="name">Full Name</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-input" required>
+                            <label class="form-label" for="email">Email Address</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="phone" class="form-input">
+                            <label class="form-label" for="phone">Phone Number</label>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="subject" class="form-input" required>
+                                <option value=""></option>
+                                <option value="prescription">Prescription Refill</option>
+                                <option value="consultation">Doctor Consultation</option>
+                                <option value="delivery">Home Delivery</option>
+                                <option value="insurance">Insurance Query</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label class="form-label" for="subject">Subject</label>
+                        </div>
+
+                        <div class="form-group form-textarea-group">
+                            <textarea id="message" class="form-textarea" required></textarea>
+                            <label class="form-label" for="message">Your Message</label>
+                        </div>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="form-button">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Our Location</h2>
+                <p class="section-subtitle">Visit us at our state-of-the-art pharmacy facility</p>
+            </div>
+
             <div class="map-container">
-                <!-- Replace with your actual Google Maps embed -->
-                <!-- <iframe src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.177858804427!2d-73.98784468459436!3d40.70575197933119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a315cdf4c9b%3A0x8b934de5cae6f7a!2sWall%20St%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1648646787895!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125042.27043141861!2d78.05589385931025!3d11.653891511746826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf1ccf52cba0b%3A0xee9989007068ca47!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1766508878465!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
+                <div class="map-overlay">
+                    <div class="map-address">
+                        <h3 class="map-title">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent);"></i>
+                            MediCare Pharmacy
+                        </h3>
+                        <div class="map-details">
+                            <p>123 Health Street, Medical District</p>
+                            <p>New York, NY 10001, United States</p>
+                            <p style="margin-top: 10px; font-size: 0.9rem;">
+                                <i class="fas fa-car"></i> Free Parking • 
+                                <i class="fas fa-wheelchair"></i> Accessible • 
+                                <i class="fas fa-wifi"></i> Free WiFi
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-<img
-  class="interior-image"
-  #interiorImg
-  src="assets/slide1.jpg"
-  alt="Modern veterinary pharmacy interior"
-/>
-    </main>
+
+    <div class="fab-container">
+  <button class="fab" (click)="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</div>
